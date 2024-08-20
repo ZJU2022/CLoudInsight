@@ -91,7 +91,6 @@ _注：架构图可参考《悟空聊架构-教你画架构图》中的示例。
 
 
 
-_注：架构图可参考《悟空聊架构-教你画架构图》中的示例。_
 
 ---
 [参考链接](https://www.51cto.com/article/717315.html)
@@ -104,4 +103,24 @@ _注：架构图可参考《悟空聊架构-教你画架构图》中的示例。
 ![Alt text](img/%E4%BA%91%E5%8E%9F%E7%94%9F%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1.jpg)
 
 [参考链接]([Title](cloud))
+
+# 快速链接
+- 计算：[Title](cloud/%E8%AE%A1%E7%AE%97.md)
+- 网络：[Title](cloud/%E7%BD%91%E7%BB%9C.md)
+- 云盘：[Title](cloud/%E4%BA%91%E7%9B%98.md)
+- 存储：[Title](cloud/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8.md)
+- 容器：[Title](cloud/%E5%AE%B9%E5%99%A8.md)
+- 运维：[Title](cloud/%E8%BF%90%E7%BB%B4%E4%B8%8E%E7%9B%91%E6%8E%A7.md)
+- 弹性伸缩：[Title](cloud/%E5%BC%B9%E6%80%A7%E4%BC%B8%E7%BC%A9%E4%B8%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1.md)
+
+# 参考文献
+- 《深入浅出云计算》
+- 《激荡十年：云计算的过去、现在和未来》
+- 《图解云计算架构，基础设施和API》
+- [GitHub: cloud-computing-101](https://github.com/ZJU2022/cloud-computing-101)
+- [GitHub: PassJava-Learning](https://github.com/Jackson0714/PassJava-Learning)
+
+
+
+
 
