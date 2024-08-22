@@ -113,6 +113,9 @@ _注：架构图可参考《悟空聊架构-教你画架构图》中的示例。
 - 运维：[Title](cloud/%E8%BF%90%E7%BB%B4%E4%B8%8E%E7%9B%91%E6%8E%A7.md)
 - 弹性伸缩：[Title](cloud/%E5%BC%B9%E6%80%A7%E4%BC%B8%E7%BC%A9%E4%B8%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1.md)
 
+# 代码逻辑
+- demo 文件夹包含基于 Go 语言及相关框架的 Web 开发示例，包括接口设计和插件使用等内容。
+
 # 参考文献
 - 《深入浅出云计算》
 - 《激荡十年：云计算的过去、现在和未来》
@@ -120,6 +123,12 @@ _注：架构图可参考《悟空聊架构-教你画架构图》中的示例。
 - [GitHub: cloud-computing-101](https://github.com/ZJU2022/cloud-computing-101)
 - [GitHub: PassJava-Learning](https://github.com/Jackson0714/PassJava-Learning)
 
+# 贡献者欢迎
+- 非常欢迎您的加入！
+
+# 尾语
+-  本项目为我们旅程的上半部分，主要聚焦于云计算相关知识。下半部分将深入探讨UCloud公有云产品线的实际业务经验。
+-  请注意，项目中的内容是基于我个人对云计算的理解，因此可能存在错误或遗漏之处。欢迎大家积极反馈，提交 issue 或者 pull request（PR），共同完善和扩展此项目。
 
 
 
