@@ -16,3 +16,22 @@ type UserService interface {
 	FindOrCreate(ctx context.Context, phone string) (domain.User, error)
 	//FindOrCreateByWechat(ctx context.Context, info domain.WechatInfo) (domain.User, error)
 }
+
+/*
+
+GORM补充repository
+
+type userService struct {
+	repo repository.UserRepository
+	//logger *zap.Logger
+}
+
+func (svc *userService) Signup(ctx context.Context, u domain.User) error {
+	hash, err := bcrypt.GenerateFromPassword([]byte(u.Password), bcrypt.DefaultCost)
+	if err != nil {
+		return err
+	}
+	u.Password = string(hash)
+	return svc.repo.Create(ctx, u)
+}
+*/

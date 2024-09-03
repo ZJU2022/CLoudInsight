@@ -50,3 +50,15 @@ UserHandler 并不直接依赖于 CodeService 的具体实现，而是依赖于 
                                      +--------------------------+
 
 */
+
+/*
+1. 前后端联调请求流程
+
+第一步：前端输入：img/前端输入.png
+第二步：控制台HTTP请求：img/HTTP请求.png
+第三步：后端Web层，接受请求并校验 webook/web/user.go/SignUp
+第四步：调用业务逻辑处理请求 webook/service/user.go
+第五步：根据业务逻辑处理结果返回响应
+
+
+*/
