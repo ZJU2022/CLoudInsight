@@ -24,14 +24,20 @@ type UserHandler struct {
 
 // 方法用于注册与用户相关的所有路由，这些路由定义了不同的 HTTP 请求与相应处理方法的映射。
 func (c *UserHandler) RegisterRoutes(server *gin.Engine) {
-	server.POST("/users/signup", c.SignUp)
-	server.POST("/users/login")
-	server.POST("/users/edit")
-	server.GET("/users/profile")
+	//分散注册
+	//分组路由
+	ug := server.Group("/users")
+	ug.POST("/signup", c.SignUp)
+	ug.POST("/login")
+	ug.POST("/edit")
+	ug.GET("/profile")
 }
 
 // SignUp 用户注册接口
+// Web 服务接口：是指通过 HTTP 请求和响应进行通信的服务接口，例如 SignUp。
+// Go 语言接口：是一种类型定义，规定了一组方法签名，由具体类型来实现。
 func (h *UserHandler) SignUp(c *gin.Context) {
+	//定义内部结构体来接收数据
 	var req struct {
 		Email    string `json:"email" binding:"required,email"`
 		Password string `json:"password" binding:"required,min=8"`
@@ -45,11 +51,20 @@ func (h *UserHandler) SignUp(c *gin.Context) {
 		return
 	}
 
+	//业务逻辑
+
 	// 检查密码复杂性
 	if !h.passwordRexExp.MatchString(req.Password) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "密码不符合要求"})
 		return
 	}
+	//检查邮箱格式
+
+	//密码和确认密码需要相等
+
+	//密码需要符合一定规则
+
+	//接口兼容
 
 	// 创建用户结构体
 	user := domain.User{
