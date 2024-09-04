@@ -17,10 +17,25 @@ type User struct {
 	// UTC 0 的时区
 	Ctime time.Time
 
-	//WechatInfo WechatInfo
+	WechatInfo WechatInfo
 
 	//Addr Address
 }
+
+// WechatInfo 微信的授权信息
+type WechatInfo struct {
+	// OpenId 是应用内唯一
+	OpenId string
+	// UnionId 是整个公司账号内唯一
+	UnionId string
+}
+
+/*
+type Product struct {
+	ID    uint
+	Code  string
+	Price uint
+}*/
 
 // TodayIsBirthday 判定今天是不是我的生日
 func (u User) TodayIsBirthday() bool {
