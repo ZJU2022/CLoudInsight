@@ -26,6 +26,8 @@ type userService struct {
 	//logger *zap.Logger
 }
 
+
+//用户注册的核心业务逻辑，包括密码的安全加密和用户数据的持久化存储，确保数据的正确性和安全性
 func (svc *userService) Signup(ctx context.Context, u domain.User) error {
 	hash, err := bcrypt.GenerateFromPassword([]byte(u.Password), bcrypt.DefaultCost)
 	if err != nil {
