@@ -66,7 +66,7 @@ func (h *UserHandler) SignUp(c *gin.Context) {
 
 	//接口兼容
 
-	// 创建用户结构体
+	// 创建用户结构体，将http映射成为程序中对象
 	user := domain.User{
 		Email:    req.Email,
 		Password: req.Password, // 在实际应用中应加密存储密码
