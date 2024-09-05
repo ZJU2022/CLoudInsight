@@ -7,7 +7,7 @@ import (
 	"database/sql"
 )
 
-// 别名机制，向上返回，避免跨层依赖
+// 别名机制，向上返回，
 var ErrUserDuplicate = dao.ErrUserDuplicate
 var ErrUserNotFound = dao.ErrDataNotFound
 
@@ -28,6 +28,8 @@ type UserRepository interface {
 type CachedUserRepository struct {
 	dao dao.UserDAO
 }
+
+// func NewCachedUserRepository() UserRepository {}构造函数
 
 // 抽象存储，代表数据在程序中的存储
 func (ur *CachedUserRepository) Create(ctx context.Context, u domain.User) error {

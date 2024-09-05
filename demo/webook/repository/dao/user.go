@@ -26,11 +26,12 @@ type UserDAO interface {
 	//FindById(ctx context.Context, id int64) (User, error)
 }
 
+// 结构体实现接口，定义接口所有方法
 type GORMUserDAO struct {
 	db *gorm.DB
 }
 
-func NewGORMUserDAO(db *gorm.DB) UserDAO {
+func NewUserDAO(db *gorm.DB) UserDAO {
 	return &GORMUserDAO{
 		db: db,
 	}
