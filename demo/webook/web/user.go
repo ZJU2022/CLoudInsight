@@ -22,6 +22,19 @@ type UserHandler struct {
 	codeSvc        service.CodeService
 }
 
+// NewUserHandler 构造函数，用于创建 UserHandler 实例并初始化其字段
+func NewUserHandler(userSvc service.UserService, codeSvc service.CodeService) *UserHandler {
+	// 初始化正则表达式用于校验邮箱和密码
+	emailRexExp := regexp.MustCompile(`^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$`)
+	passwordRexExp := regexp.MustCompile(`^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$`)
+	return &UserHandler{
+		emailRexExp:    emailRexExp,
+		passwordRexExp: passwordRexExp,
+		svc:            userSvc,
+		codeSvc:        codeSvc,
+	}
+}
+
 // 方法用于注册与用户相关的所有路由，这些路由定义了不同的 HTTP 请求与相应处理方法的映射。
 func (c *UserHandler) RegisterRoutes(server *gin.Engine) {
 	//分散注册
