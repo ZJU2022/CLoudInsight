@@ -4,8 +4,15 @@ import (
 	"CloudInsight/demo/webook/domain"
 	"CloudInsight/demo/webook/repository"
 	"context"
+	"errors"
 
 	"golang.org/x/crypto/bcrypt"
+)
+
+// 别名机制，向上返回，避免跨层依赖
+var (
+	ErrDuplicateEmail        = repository.ErrUserDuplicate
+	ErrInvalidUserOrPassword = errors.New("用户不存在或者密码不对")
 )
 
 //go:generate mockgen -source=./user.go -package=svcmocks -destination=./mocks/user.mock.go UserService

@@ -7,6 +7,7 @@ import (
 	"database/sql"
 )
 
+// 别名机制，向上返回，避免跨层依赖
 var ErrUserDuplicate = dao.ErrUserDuplicate
 var ErrUserNotFound = dao.ErrDataNotFound
 
@@ -30,6 +31,7 @@ type CachedUserRepository struct {
 
 // 抽象存储，代表数据在程序中的存储
 func (ur *CachedUserRepository) Create(ctx context.Context, u domain.User) error {
+	// 将业务对象（domain.User）转换为数据对象（dao.User），并调用 dao 层的方法进行数据库操作
 	return ur.dao.Insert(ctx, dao.User{
 		Email: sql.NullString{
 			String: u.Email,

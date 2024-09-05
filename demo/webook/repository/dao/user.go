@@ -45,6 +45,7 @@ func (ud *GORMUserDAO) Insert(ctx context.Context, u User) error {
 	if me, ok := err.(*mysql.MySQLError); ok {
 		const uniqueIndexErrNo uint16 = 1062
 		if me.Number == uniqueIndexErrNo {
+			//尽可能给前端返回准确的错误信息
 			return ErrUserDuplicate
 		}
 	}
