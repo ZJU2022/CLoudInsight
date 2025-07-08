@@ -89,10 +89,11 @@ func (h *UserHandler) SignUp(c *gin.Context) {
 
 	// 调用 UserService 的 Signup 方法，将新创建的 user 结构体传递给服务层，执行用户注册的业务逻辑。
 	if err := h.svc.Signup(context.Background(), user); err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "注册失败，请稍后重试"})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "系统错误，请联系管理员"})
 		return
 	}
 
 	// 注册成功，返回成功响应
 	c.JSON(http.StatusOK, gin.H{"message": "注册成功"})
 }
+
