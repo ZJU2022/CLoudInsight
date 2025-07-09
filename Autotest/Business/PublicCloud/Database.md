@@ -4,6 +4,8 @@
 
 本文档详细描述了数据库产品线的自动化测试设计思路，包括功能点梳理、自动化交付产物设计、测试策略制定以及具体实施方案。
 
+
+
 ## 第一步：功能点与实例类型梳理
 
 ### 实例类型分类
@@ -133,9 +135,6 @@ CreateFromBackup → StopDatabase → DeleteDatabase
 - **参数化设计**: 支持灵活的参数调整
 - **数据隔离**: 确保测试数据不影响生产环境
 
-## 具体功能模块示例
-
-https://github.com/ZJU2022/CLoudInsight/blob/main/img/%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E7%BB%86%E5%8C%96%E6%A1%88%E4%BE%8B.png
 
 ## 总结
 
